@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Register</title>
+</head>
+
+<body>
+    <form action="/formPost" method="post" class="form">
+        <h1>Register</h1>
+        <label class="container">
+            <label for="fname">Frist name</label>
+            <input type="text" id="fname" name="fname" required placeholder="enter first name" class="input-details" pattern="[a-z]{3,15}">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" required placeholder="" enter last name" class="input-details pattern="[a-z]{3,25}">
+        </label>
+
+        <label class="gender">gender
+            <label for="male">
+                <input type="radio" id="male" name="gender" value="male" required>male
+            </label>
+            <label for="female">
+                <input type="radio" id="female" name="gender" value="female" required>female
+            </label>
+        </label>
+
+        <label for="age" class="container">age
+            <input type="number" min="16" max="35" id="age" name="age" pattern="[1-9]{2}" required class="input-details">
+        </label>
+
+        <label for="email" class="container">E-mail
+            <input type="email" id="email" name="email" placeholder="enter email" required class="input-details"> 
+        </label>
+
+        <label for="phone" class="container">Phone
+            <input type="text" placeholder="enter phone no." required class="input-details" id="phone" name="phone" pattern="[0-9]{10}"> 
+        </label>
+
+        <label for="course" class="container">Select course
+            <select name="course" id="course">
+                <option value="mern" title="mongodb, express,react,nodejs">MERN stack</option>
+                <option value="mean" title="mongodb, express,angular,nodejs">MEAN stack</option>
+                <option value="java full stack">Java full Stack</option>
+                <option value="data science">Data Science</option>
+                
+            </select>
+        </label>
+        <button id="sub-button">Submit</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+}
+
+
+h1{
+    background-color: rgba(140, 0, 255, 0.738);
+    width:100%;
+    padding:2% 0%;
+    text-align: center;
+    color:white;
+    position: sticky;
+    top:0;
+ 
+
+}
+.form {
+    top:0;
+    width: 50%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    gap: 0.5em;
+    padding-bottom:2%;
+    
+    margin: 2% auto;
+}
+
+.container {
+    width: 60%;
+    /* background-color: yellow; */
+    display: flex;
+    flex-flow: column wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size:1.1em;
+}
+
+.gender {
+    width: 50%;
+    display: flex;
+    flex-flow: row wrap;
+    /* background-color: aqua; */
+    gap:15px;
+    font-size: 1.2em;
+    justify-content: center;
+    align-items: center;
+}
+input{font-size:1.1em;}
+.input-details {
+    width: 60%;
+    height: 30px;
+    border-radius: 10px;
+    border: 0.5px solid black;
+    padding: 2px;
+    text-align: center;
+}
+select{
+    font-size:0.9em;
+}
+#sub-button{
+    width:150px;
+    height:40px;
+    border-radius: 20px;
+    font-size:1.6em;
+    background-color:white;
+    border:2px solid rgb(174, 0, 255);
+}
+
+#sub-button:hover{
+    background-color: rgb(171, 0, 251);
+    color:white;
+}
+
+    </style>
+    <title>Register</title>
+</head>
+
+<body>
+    <form action="/formPost" method="post" class="form">
+        <h1>Register</h1>
+        <label class="container">
+            <label for="fname">Frist name</label>
+            <input type="text" id="fname" name="fname" required placeholder="enter first name" class="input-details" pattern="[a-z]{3,15}">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" required placeholder="" enter last name" class="input-details pattern="[a-z]{3,25}">
+        </label>
+
+        <label class="gender">gender
+            <label for="male">
+                <input type="radio" id="male" name="gender" value="male" required>male
+            </label>
+            <label for="female">
+                <input type="radio" id="female" name="gender" value="female" required>female
+            </label>
+        </label>
+
+        <label for="age" class="container">age
+            <input type="number" min="16" max="35" id="age" name="age" pattern="[1-9]{2}" required class="input-details">
+        </label>
+
+        <label for="email" class="container">E-mail
+            <input type="email" id="email" name="email" placeholder="enter email" required class="input-details"> 
+        </label>
+
+        <label for="phone" class="container">Phone
+            <input type="text" placeholder="enter phone no." required class="input-details" id="phone" name="phone" pattern="[0-9]{10}"> 
+        </label>
+
+        <label for="course" class="container">Select course
+            <select name="course" id="course">
+                <option value="mern" title="mongodb, express,react,nodejs">MERN stack</option>
+                <option value="mean" title="mongodb, express,angular,nodejs">MEAN stack</option>
+                <option value="java full stack">Java full Stack</option>
+                <option value="data science">Data Science</option>
+                
+            </select>
+        </label>
+        <button id="sub-button">Submit</button>
+    </form>
+</body>
+
+</html>
